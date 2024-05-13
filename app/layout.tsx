@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import SideHeader from "@/app/Component/SideHeader";
+import Header from "@/app/Component/Header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+      <Header />
+        <div className="drawer lg:drawer-open">
+          <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content flex flex-col items-center">
+            {children}
+          </div>
+          <SideHeader />
+        </div>
       </body>
     </html>
   );

@@ -1,109 +1,136 @@
 "use client";
-import React, { useState } from "react";
-import { FaChartPie } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
+import React from "react";
 
-const Sidebar: React.FC = () => {
-  const [selectedMenu, setSelectedMenu] = useState<string | null>(null);
-
+export default function page() {
   return (
-    <div>
-      <div className="navbar bg-base-100">
-        <div className="flex-none">
-          <div className="drawer-content flex flex-col items-center justify-center">
-            {/* Page content here */}
-            <label
-              htmlFor="my-drawer-2"
-              className="btn btn-ghost drawer-button lg:hidden"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block w-5 h-5 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div className="flex-1">
-          <img
-            src="https://minio.saksiam.co.th/public/saktech/logo/logo-sak-ai-2.png"
-            className="h-12"
-            alt="logo"
-          ></img>
-          <a className="text-xl ml-3 font-bold">SAKTECH SMS</a>
-        </div>
-        <div className="flex-none gap-2">
-          <div className="join">
-            <div>
-              <div>
-                <input
-                  className="input input-bordered join-item"
-                  placeholder="Search"
-                />
+    <div className="container lg:container md:container sm:container flex-wrap">
+      <div className="flex-col lg:flex-row grid grid-cols-1 lg:grid-cols-3 gap-3 items-center">
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
               </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
             </div>
-            <button className="btn btn-primary join-item">
-              <IoSearch fontSize="20" />
-            </button>
           </div>
         </div>
-      </div>
 
-      <div className="drawer lg:drawer-open">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-side">
-          <label
-            htmlFor="my-drawer-2"
-            aria-label="close sidebar"
-            className="drawer-overlay"
-          ></label>
-          <ul className="menu menu-lg p-4 w-60 min-h-full bg-blue-600 text-base-100">
-            {/* Sidebar content here */}
-            <li
-              className={`mb-2 ${selectedMenu === 'dashboard' ? 'bg-blue-800 rounded-btn' : ''}`}
-              onClick={() => setSelectedMenu('dashboard')}
-            >
-              <a className="flex items-center">
-                <FaChartPie className="mr-2" />
-                Dashboard
-              </a>
-            </li>
-            <li
-              className={`mb-2 ${selectedMenu === 'send_sms' ? 'bg-blue-800 rounded-btn' : ''}`}
-              onClick={() => setSelectedMenu('send_sms')}
-            >
-              <a className="flex items-center">
-                <FaChartPie className="mr-2" />
-                Send SMS
-              </a>
-            </li>
-            <li
-              className={`mb-2 ${selectedMenu === 'reports' ? 'bg-blue-800 rounded-btn' : ''}`}
-              onClick={() => setSelectedMenu('reports')}
-            >
-              <a className="flex items-center">
-                <FaChartPie className="mr-2" />
-                Reports
-              </a>
-            </li>
-            <hr></hr>
-            {/* Login button */}
-            <li>
-              <button className="btn btn-primary w-full mt-5">Login</button>
-            </li>
-          </ul>
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-full lg:w-100 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
+            <div className="stat">
+              <div className="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <div className="stat-title">Total Likes</div>
+              <div className="stat-value text-primary">25.6K</div>
+              <div className="stat-desc">21% more than last month</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Sidebar;
+}
